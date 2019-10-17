@@ -120,9 +120,9 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         $orderIsPreorder = false;
         foreach ($itemCollection as $item) {
 
-            if ($this->isProductQtyZero($item) && ($this->getOrderedQtyForItem($item) == 1)) {
+            /*if ($this->isProductQtyZero($item) && ($this->getOrderedQtyForItem($item) == 1)) {
                 continue;
-            }
+            }*/
 
             /** @var \Magento\Sales\Model\Order\Item $item */
             $orderItemIsPreorder = $this->getOrderItemIsPreorder($item);
