@@ -42,7 +42,7 @@ class Sender
             ->setTemplateOptions($emailMetadata->getTemplateOptions())
             ->setTemplateVars($emailMetadata->getTemplateVariables())
             ->setFrom(['name' => $emailMetadata->getSenderName(), 'email' => $emailMetadata->getSenderEmail()])
-            ->addTo([$emailMetadata->getRecipientName() => $emailMetadata->getRecipientEmail()])
+            ->addTo($emailMetadata->getRecipientEmail(), $emailMetadata->getRecipientName())
             ->getTransport()
             ->sendMessage();
     }
